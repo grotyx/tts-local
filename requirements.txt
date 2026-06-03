@@ -1,0 +1,26 @@
+# tts-local — 발표자료 TTS → 영상 인코딩 도구
+# torch/torchaudio는 GPU에 맞는 빌드를 별도 설치하세요 (예: cu128):
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+
+# 공통
+python-pptx>=1.0.0
+pydub>=0.25.1
+soundfile>=0.12.0
+requests>=2.31.0
+rich>=13.0.0
+
+# Qwen3-TTS 로컬 엔진
+qwen-tts==0.1.1
+transformers==4.57.3
+accelerate==1.12.0
+librosa>=0.10.0
+einops>=0.8.0
+onnxruntime>=1.18.0
+
+# Gemini 엔진 (REST 사용, SDK는 선택)
+# google-genai>=1.0.0
+
+# PPTX → 이미지/네이티브 영상 (Windows + PowerPoint COM)
+pywin32>=305; platform_system=="Windows"
+
+# 외부 도구: ffmpeg (PATH에 있어야 함)

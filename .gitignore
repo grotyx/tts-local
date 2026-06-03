@@ -1,0 +1,40 @@
+# ── Secrets (절대 커밋 금지) ──
+.env
+*.key
+*.pem
+
+# ── 사용자 콘텐츠: 발표자료·음성·영상 (개인정보/대용량) ──
+input/
+output/
+voices/
+*.pptx
+*.ppt
+*.mp4
+*.mov
+*.wmv
+*.wav
+*.mp3
+*.m4a
+psm_voice.*
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ── 임시/디버그 ──
+_spike*.py
+_*_test.py
+_validate*.py
+_regen*.py
+_*.txt
+_chunks/
+_segments/
+
+# ── OS ──
+Thumbs.db
+.DS_Store
+desktop.ini

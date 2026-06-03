@@ -1,0 +1,55 @@
+{
+  "engine": "qwen_local",
+
+  "engines": {
+    "qwen_local": {
+      "model_id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "clone_model_id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+      "device": "cuda:0",
+      "attn_implementation": "sdpa",
+      "voice": "Ryan",
+      "language": "English",
+      "instruct": "An American university professor presenting at an academic conference: clear, confident, professional delivery at a slightly brisk pace.",
+      "seed": 42,
+      "temperature": 0.6,
+      "top_p": 0.9
+    },
+    "gemini": {
+      "model": "gemini-3.1-flash-tts-preview",
+      "voice": "Charon",
+      "temperature": 0.6,
+      "audio_profile": "A clear, professional academic presenter.",
+      "directors_note": "Style: confident, clear, professional. Pace: slightly brisk, natural, no dead air. Accent: neutral.",
+      "instruct": "An university professor presenting at an academic conference: clear, confident, professional delivery at a slightly brisk pace, switching seamlessly between English and Korean.",
+      "api_key_env": "GEMINI_API_KEY"
+    },
+    "elevenlabs": {
+      "model": "eleven_multilingual_v2",
+      "voice_id": "",
+      "api_key_env": "ELEVENLABS_API_KEY",
+      "sample_rate": 24000
+    }
+  },
+
+  "video": {
+    "method": "ffmpeg",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "gap_seconds": 0.7,
+    "crf": 18,
+    "preset": "medium",
+    "speed": 1.0
+  },
+
+  "pptx": {
+    "embed_audio": true,
+    "autoplay": true
+  },
+
+  "paths": {
+    "input_folder": "./input",
+    "output_folder": "./output",
+    "voices_folder": "./voices"
+  }
+}
