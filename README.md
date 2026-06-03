@@ -1,4 +1,4 @@
-# tts-local — 학술 강의·발표 나레이션 영상 생성기
+# 학술 강의·발표 나레이션 영상 생성기
 ### Academic Lecture & Talk Narration Video Generator — powered by Local LLM (Qwen3-TTS) or Gemini TTS
 
 발표·강의 대본(Markdown)을 **로컬 LLM(Qwen3-TTS) 또는 Gemini TTS**로 음성화하고, **PowerPoint에 오디오를 삽입**해 **나레이션이 입혀진 강의 영상(MP4)** 으로 만드는 재사용 가능한 CLI 도구. 학술 발표·강의 자료를 발표자 없이도 영상 강의로 제작합니다.
