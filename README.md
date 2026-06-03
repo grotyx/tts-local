@@ -1,8 +1,9 @@
-# tts-local
+# tts-local — 학술 강의·발표 나레이션 영상 생성기
+### Academic Lecture & Talk Narration Video Generator — powered by Local LLM (Qwen3-TTS) or Gemini TTS
 
-발표 대본(Markdown)을 TTS로 음성화하고, **PowerPoint에 오디오를 삽입**하고, **나레이션이 들어간 발표 영상(MP4)** 으로 인코딩하는 재사용 가능한 CLI 도구.
+발표·강의 대본(Markdown)을 **로컬 LLM(Qwen3-TTS) 또는 Gemini TTS**로 음성화하고, **PowerPoint에 오디오를 삽입**해 **나레이션이 입혀진 강의 영상(MP4)** 으로 만드는 재사용 가능한 CLI 도구. 학술 발표·강의 자료를 발표자 없이도 영상 강의로 제작합니다.
 
-A reusable CLI that turns a presentation script (Markdown) into speech, embeds the audio into the PowerPoint, and renders a **narrated presentation video (MP4)**.
+A reusable CLI that turns lecture/talk scripts (Markdown) into speech with a **local LLM (Qwen3-TTS) or Gemini TTS**, embeds the audio into the PowerPoint, and renders a **narrated lecture video (MP4)** — produce video lectures from academic slides without a live speaker.
 
 - 🎙️ **엔진 플러그인** / pluggable engines: **Gemini** (cloud, 한↔영 코드스위칭), **Qwen3-TTS** (local GPU, 무료·보이스클로닝), **ElevenLabs**
 - 🎬 **영상 2경로** / two video paths: **ffmpeg** (정적 슬라이드), **PowerPoint native** (애니메이션·내장 동영상 보존)
