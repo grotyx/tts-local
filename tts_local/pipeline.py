@@ -100,8 +100,8 @@ class PipelineConfig:
     clone_mode: str = "full"   # "full"(음색+ref_text) | "xvec"(음색만)
     # 영상
     video_method: str = "ffmpeg"   # "ffmpeg" | "powerpoint" | "none"
-    width: int = 1920
-    height: int = 1080
+    width: int = 3840   # 기본 4K UHD (config.json/CLI로 덮어쓰기 가능)
+    height: int = 2160
     fps: int = 30
     gap_seconds: float = 0.7
     crf: int = 18
@@ -124,7 +124,7 @@ class PipelineConfig:
             voice=ecfg.get("voice") or ecfg.get("voice_id"),
             instruct=ecfg.get("instruct"), language=ecfg.get("language"),
             video_method=v.get("method", "ffmpeg"),
-            width=v.get("width", 1920), height=v.get("height", 1080),
+            width=v.get("width", 3840), height=v.get("height", 2160),
             fps=v.get("fps", 30), gap_seconds=v.get("gap_seconds", 0.7),
             crf=v.get("crf", 18), preset=v.get("preset", "medium"),
             speed=float(v.get("speed", 1.0)),

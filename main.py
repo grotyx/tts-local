@@ -75,6 +75,10 @@ def main() -> int:
     ap.add_argument("--speed", type=float, default=None,
                     help="음성 배속(음정 유지). 예: 1.15 = 15%% 빠르게")
     ap.add_argument("--video", default=None, choices=["ffmpeg", "powerpoint", "none"])
+    ap.add_argument("--width", type=int, default=None,
+                    help="영상 가로 해상도 px (예: 3840=4K UHD). 생략 시 config.json")
+    ap.add_argument("--height", type=int, default=None,
+                    help="영상 세로 해상도 px (예: 2160=4K UHD). 생략 시 config.json")
     ap.add_argument("--no-embed", action="store_true", help="PPTX 오디오 삽입 생략")
     ap.add_argument("--regenerate", action="store_true", help="기존 음성 무시하고 재생성")
     # 클로닝
@@ -110,6 +114,10 @@ def main() -> int:
         cfg.speed = args.speed
     if args.video:
         cfg.video_method = args.video
+    if args.width:
+        cfg.width = args.width
+    if args.height:
+        cfg.height = args.height
     if args.no_embed:
         cfg.embed_audio = False
     if args.clone:
